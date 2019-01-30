@@ -14,6 +14,8 @@
 		3DA29B8B22011E5C0034AA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA29B8922011E5C0034AA46 /* LaunchScreen.storyboard */; };
 		3DA29B9622011E5D0034AA46 /* lifecounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA29B9522011E5D0034AA46 /* lifecounterTests.swift */; };
 		3DA29BA122011E5D0034AA46 /* lifecounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA29BA022011E5D0034AA46 /* lifecounterUITests.swift */; };
+		3DA29BB1220128C70034AA46 /* MTGPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA29BB0220128C70034AA46 /* MTGPlayer.xib */; };
+		3DA29BB3220128DB0034AA46 /* MTGPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA29BB2220128DB0034AA46 /* MTGPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3DA29B9C22011E5D0034AA46 /* lifecounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lifecounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA29BA022011E5D0034AA46 /* lifecounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifecounterUITests.swift; sourceTree = "<group>"; };
 		3DA29BA222011E5D0034AA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DA29BB0220128C70034AA46 /* MTGPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTGPlayer.xib; sourceTree = "<group>"; };
+		3DA29BB2220128DB0034AA46 /* MTGPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				3DA29B9422011E5D0034AA46 /* lifecounterTests */,
 				3DA29B9F22011E5D0034AA46 /* lifecounterUITests */,
 				3DA29B7E22011E590034AA46 /* Products */,
+				3DA29BB0220128C70034AA46 /* MTGPlayer.xib */,
+				3DA29BB2220128DB0034AA46 /* MTGPlayer.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,6 +238,7 @@
 				3DA29B8B22011E5C0034AA46 /* LaunchScreen.storyboard in Resources */,
 				3DA29B8822011E5C0034AA46 /* Assets.xcassets in Resources */,
 				3DA29B8622011E590034AA46 /* Main.storyboard in Resources */,
+				3DA29BB1220128C70034AA46 /* MTGPlayer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DA29B8322011E590034AA46 /* ViewController.swift in Sources */,
+				3DA29BB3220128DB0034AA46 /* MTGPlayer.swift in Sources */,
 				3DA29B8122011E590034AA46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
