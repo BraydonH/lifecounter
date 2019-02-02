@@ -1,18 +1,22 @@
 //
-//  MTGPlayer.swift
+//  PlayerTableViewCell.swift
 //  lifecounter
 //
-//  Created by cse-loaner on 1/29/19.
+//  Created by cse-loaner on 1/31/19.
 //  Copyright © 2019 uw. All rights reserved.
 //
 
 import UIKit
 
-@IBDesignable
-class MTGPlayer: UIView {
+class playerTableViewCell: UITableViewCell {
 
-
-  @IBOutlet var contentView: UIView!
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
   @IBOutlet weak var label: UILabel!
   @IBOutlet weak var healthLabel: UILabel!
   @IBOutlet weak var minusMultipleButton: UIButton!
@@ -20,8 +24,15 @@ class MTGPlayer: UIView {
   @IBOutlet weak var plusOneButton: UIButton!
   @IBOutlet weak var plusMultipleButton: UIButton!
   
+  weak var controller: ViewController?
+  
   var currentHealth: Int = 20
   var increment: Int = 5
+  
+  var viewController: ViewController? {
+    get { return controller}
+    set { controller = newValue }
+  }
   
   var playerName: String? {
     get { return label?.text }
@@ -30,37 +41,19 @@ class MTGPlayer: UIView {
   
   var health: Int {
     get { return currentHealth }
-    set { currentHealth = newValue }
+    set {
+      currentHealth = newValue
+      healthLabel.text = String(currentHealth)
+    }
   }
   
   var buttonIncrement: Int {
     get { return increment }
     set {
       increment = newValue
-      minusMultipleButton.titleLabel?.text = "-\(newValue)"
-      plusMultipleButton.titleLabel?.text = "+\(newValue)"
+      minusMultipleButton.setTitle("-\(newValue)", for: .normal)
+      plusMultipleButton.setTitle("+ \(newValue)", for: .normal)
     }
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    initSubviews()
-  }
-  
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-    initSubviews()
-  }
-  
-  func initSubviews() {
-    // standard initialization logic
-    let nib = UINib(nibName: "MTGPlayer", bundle: nil)
-    nib.instantiate(withOwner: self, options: nil)
-    contentView.frame = bounds
-    addSubview(contentView)
-    
-      // custom initialization logic
-    healthLabel.text = String(currentHealth)
   }
   
   @IBAction func buttonPressed(_ sender: UIButton) {
@@ -76,14 +69,11 @@ class MTGPlayer: UIView {
     default:
       break
     }
+    currentHealth = max(currentHealth, 0)
+    controller?.startGame()
     healthLabel.text = String(currentHealth)
+    controller?.updateHealth(name: label.text!, health: currentHealth)
   }
-  /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }
+
