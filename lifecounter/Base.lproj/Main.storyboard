@@ -216,7 +216,7 @@
                     <navigationItem key="navigationItem" id="1Ac-8n-5i7">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="NbI-QK-oIl">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="LlY-LV-3wU"/>
+                                <segue destination="EGc-VF-UyF" kind="presentation" modalTransitionStyle="flipHorizontal" id="FKk-Bs-ffL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -265,8 +265,4 @@
             <point key="canvasLocation" x="1743.2" y="26.53673163418291"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="eF7-Hn-9pu"/>
-        <segue reference="LlY-LV-3wU"/>
-    </inferredMetricsTieBreakers>
 </document>
